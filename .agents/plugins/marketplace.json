@@ -1,0 +1,20 @@
+{
+  "name": "ia-local-casa",
+  "interface": {
+    "displayName": "IA Local Casa"
+  },
+  "plugins": [
+    {
+      "name": "vercel-curated-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vercel-curated-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
