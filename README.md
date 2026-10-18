@@ -13,37 +13,47 @@ Actualmente, el catálogo ofrece `vercel-curated-skills` (versión `0.1.0`), una
 
 Ambas consultan las pautas publicadas por Vercel antes de cada revisión, por lo que necesitan acceso a internet.
 
-## Añadir el marketplace en ChatGPT/Codex
+## Añadir el marketplace en ChatGPT
 
-Esta ruta requiere Codex CLI instalado y la aplicación de escritorio con acceso al directorio de complementos.
+La forma más sencilla es desde la interfaz de ChatGPT Desktop:
 
-1. Ejecuta este comando en la terminal para registrar el repositorio como fuente:
+1. Abre **Configuración → Complementos**.
+2. Selecciona **Añadir → Añadir un marketplace**.
+3. En **Origen**, escribe `ilus78/IA-Local-Casa-Marketplace`.
+4. En **Referencia de Git**, deja `main`.
+5. Deja **Rutas dispersas** vacío.
+6. Selecciona **Añadir marketplace**.
+7. En la sección **Personales**, abre **IA Local Casa**.
 
-   ```bash
-   codex plugin marketplace add ilus78/IA-Local-Casa-Marketplace
-   ```
-
-2. Reinicia la aplicación de escritorio de ChatGPT/Codex.
-3. Abre **Plugins** (complementos) y selecciona **IA Local Casa** en las fuentes del directorio.
-
-El identificador del marketplace es `ia-local-casa`. Si no aparece, comprueba las fuentes registradas:
-
-```bash
-codex plugin marketplace list
-```
-
-Consulta la [documentación oficial sobre marketplaces](https://developers.openai.com/plugins/build/plugins#add-a-marketplace-from-the-cli) si tu versión no ofrece estas opciones.
+El identificador interno del marketplace es `ia-local-casa`.
 
 ## Instalar vercel-curated-skills
 
 Añadir el marketplace permite explorar su catálogo. Para instalar el complemento:
 
 1. Dentro de **IA Local Casa**, abre `vercel-curated-skills`.
-2. Selecciona la opción de instalación.
-3. Abre un chat nuevo para usar las habilidades.
+2. Selecciona **Instalar complemento**.
+3. Confirma que aparecen las habilidades **Web Design Guidelines** y **Writing Guidelines**.
+4. Abre un chat nuevo para usarlas.
 
-Por ejemplo, con el README disponible en el chat o proyecto:
+Por ejemplo:
 
 > Usa la habilidad Writing Guidelines para revisar el README. No modifiques nada; indica qué mejorarías.
 
-Consulta la [guía oficial de complementos](https://learn.chatgpt.com/docs/plugins) para conocer las superficies compatibles y las opciones de instalación.
+## Alternativa con Codex CLI
+
+Para usuarios que prefieran la terminal y dispongan de Codex CLI, el marketplace también se puede registrar con:
+
+```bash
+codex plugin marketplace add ilus78/IA-Local-Casa-Marketplace
+```
+
+Después puede comprobarse con:
+
+```bash
+codex plugin marketplace list
+```
+
+## Alcance
+
+Este repositorio es público y contiene únicamente el marketplace, sus metadatos y las skills publicadas. La configuración privada, documentación interna, históricos y otros materiales del proyecto permanecen en el repositorio privado `IA-Local-Casa`.
