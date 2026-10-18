@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vercel-curated-skills",
+  "version": "0.1.0",
+  "description": "Selección curada de skills de Vercel para el proyecto IA Local Casa."
+}
